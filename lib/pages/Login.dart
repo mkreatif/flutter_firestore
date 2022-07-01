@@ -37,6 +37,7 @@ class _LoginViewState extends State<LoginView> {
       (res) {
         if (res.size > 0) {
           debugPrint("Login Success");
+          Navigator.pushReplacementNamed(context, '/recipes');
         } else {
           debugPrint("Login Failed");
         }
