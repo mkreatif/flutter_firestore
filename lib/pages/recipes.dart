@@ -17,7 +17,6 @@ class _RecipesState extends State<RecipeView> {
   void initState() {
     initApp();
     super.initState();
-    print("Init Again");
   }
 
   initApp() async {
@@ -50,8 +49,28 @@ class _RecipesState extends State<RecipeView> {
           child: ListView.builder(
         itemCount: recipes.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(recipes[index].judul),
+          final recipe = recipes[index];
+          return Card(
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(recipe.judul),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(recipe.bahan),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(recipe.cara),
+                  )
+                ],
+              ),
+            ),
           );
         },
       )),
