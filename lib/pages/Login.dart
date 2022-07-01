@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -8,16 +9,18 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-//   late CollectionReference userCollectionRefs;
   @override
   void initState() {
+    initApp();
     super.initState();
   }
 
   initApp() async {
-    // await Firebase.initializeApp(
-    //     options: DefaultFirebaseOptions.currentPlatform);
-    // userCollectionRefs = FirebaseFirestore.instance.collection('users');
+    await FirebaseFirestore.instance.collection('/users').get().then((event) {
+      for (var doc in event.docs) {
+        debugPrint("${doc.id} => ${doc.data()}");
+      }
+    });
   }
 
   @override
