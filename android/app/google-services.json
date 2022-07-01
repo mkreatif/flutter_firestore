@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957400134921",
+    "project_id": "skorpoints-pwa",
+    "storage_bucket": "skorpoints-pwa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957400134921:android:57e55ac18c5c92e9554fd8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957400134921-erlupouitpu7fmn7nr8q5fje9g1u8jtn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqSkaS-ev1Fpjh4vXAOqwf3UwbnjjSKXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957400134921-erlupouitpu7fmn7nr8q5fje9g1u8jtn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

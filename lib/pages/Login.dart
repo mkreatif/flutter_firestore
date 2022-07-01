@@ -8,12 +8,26 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+//   late CollectionReference userCollectionRefs;
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  initApp() async {
+    // await Firebase.initializeApp(
+    //     options: DefaultFirebaseOptions.currentPlatform);
+    // userCollectionRefs = FirebaseFirestore.instance.collection('users');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: Column(),
+          child: Column(
+            children: [Text("Selamat datang")],
+          ),
         ),
       ),
     );
